@@ -1,0 +1,84 @@
+/* Overall container for login page */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f6f8;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header of the login page */
+  .login-header h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for error message */
+  .error-message {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Form styling */
+  .login-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Styling for each input group */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Styling for input fields */
+  .input-field {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .input-field:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Styling for submit button container */
+  .submit-btn-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Submit button styling */
+  .submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .submit-btn:focus {
+    outline: none;
+  }
+  

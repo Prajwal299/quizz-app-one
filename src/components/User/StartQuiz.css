@@ -1,0 +1,153 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Quiz container */
+.quiz-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Title styles */
+.quiz-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #000;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Question container */
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Question card */
+.question-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.question-card:hover {
+  transform: scale(1.02);
+}
+
+/* Question text */
+.question-text {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Options container */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Option label styles */
+.option-label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.option-label.selected {
+  background-color: #007bff;
+  transform: scale(1.05);
+}
+
+.option-label:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.option-input {
+  margin-right: 12px;
+}
+
+/* Status message */
+.status-message {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.status-message.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #c62828;
+}
+
+.status-message.success {
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #2e7d32;
+}
+
+/* Submit button */
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Animation on page load */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quiz-container {
+  animation: fadeIn 0.6s ease-out;
+}

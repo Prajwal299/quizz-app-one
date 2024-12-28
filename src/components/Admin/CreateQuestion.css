@@ -1,0 +1,213 @@
+/* General body styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Main container styling */
+.create-question-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header styling */
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Error message styling */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* Input fields */
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+  background-color: #fafafa;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #6c63ff;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.4);
+}
+
+/* Submit button */
+.submit-button {
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.submit-button:hover {
+  background-color: #4e44d4;
+  transform: translateY(-3px);
+}
+
+/* Select container styling */
+.category-select-container {
+  margin-bottom: 20px;
+}
+
+/* Section for fetched questions */
+.Fetch-CategorySection {
+  width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.questions-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.question-item {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.question-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question-item p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Edit/Delete button styling */
+.edit-button,
+.delete-button {
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #4e44d4;
+  transform: translateY(-2px);
+}
+
+.edit-button:focus,
+.delete-button:focus {
+  outline: none;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .create-question-container {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .submit-button {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+
+  .questions-list {
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .create-question-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .submit-button {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .questions-list {
+    grid-template-columns: 1fr;
+  }
+
+  .question-item {
+    padding: 15px;
+  }
+
+  .question-item p {
+    font-size: 0.9rem;
+  }
+}

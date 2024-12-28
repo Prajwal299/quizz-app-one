@@ -1,0 +1,68 @@
+/* Result.css */
+.results-container {
+    padding: 20px;
+  }
+  
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .result-card {
+    border: 2px solid #ddd;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .category-badge {
+    background: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  .result-body {
+    margin-top: 20px;
+  }
+  
+  .answers-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .answer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .answer.correct {
+    color: green;
+  }
+  
+  .answer.incorrect {
+    color: red;
+  }
+  
+  .loading {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }
+  

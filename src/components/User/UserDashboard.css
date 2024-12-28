@@ -1,0 +1,96 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+/* User Dashboard Container */
+.user-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(to top right, #3e8e41, #76c7c0);
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #f44336; /* Red */
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Categories Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Flexible grid layout */
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px; /* Limit the max width */
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* Individual Category Card */
+.category-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  height: 180px;  /* Square shape */
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+}
+
+/* Hover effect for Category Cards */
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #e8f7f4;
+  color: #2c3e50;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+  .dashboard-title {
+    font-size: 2rem;
+  }
+
+  .category-card {
+    font-size: 1.2rem;
+    padding: 20px;
+    height: 150px; /* Adjust card height */
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust for smaller screens */
+  }
+}
