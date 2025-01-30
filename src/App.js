@@ -12,7 +12,7 @@ import EditQuestion from './components/Admin/EditQuestion';
 import StartQuiz from './components/User/StartQuiz';
 import UserResults from './components/User/UserResults';
 import AdminResults from './components/Admin/AdminResults';
-
+import './App.css';
 
 // Error Boundary Component
 class ErrorBoundary extends Component {
@@ -36,7 +36,14 @@ class ErrorBoundary extends Component {
 
 const App = () => {
   return (
-    <Router>
+    <div  style={{
+     
+      height: '100vh', // Ensure it fills the entire viewport height
+      width: '100vw', // Ensure it fills the entire viewport width
+      margin: 0,
+      padding: 0,
+    }} >
+    <Router>  
       <ErrorBoundary>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -45,7 +52,6 @@ const App = () => {
           <Route path="/user" element={<UserDashboard />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/create_quiz" element={<CreateQuiz />} />
-          <Route path="/admin/view_results" element={<ViewResults />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
           <Route path="/admin/create_question" element={<CreateQuestion />} />
           <Route path="/create-question" element={<CreateQuestion />} />
@@ -57,6 +63,7 @@ const App = () => {
         </Routes>
       </ErrorBoundary>
     </Router>
+    </div>
   );
 };
 

@@ -1,67 +1,159 @@
-/* General styles for form elements */
+/* EditQuestion.css */
+
+/* General container styling with gradient background */
+
 .edit-question-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #FFD700, #FF8C00);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.edit-question-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.button-group button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button-group button[type="submit"] {
+  background-color: #28a745; /* Green for save button */
+  color: white;
+}
+
+.button-group button[type="submit"]:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button-group .cancel-button {
+  background-color: #dc3545; /* Red for cancel button */
+  color: white;
+}
+
+.button-group .cancel-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Error container styling */
+.error-container {
+  background-color: rgba(220, 53, 69, 0.9); /* Semi-transparent red */
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.error-container .back-button {
+  background-color: #fff;
+  color: #dc3545;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.error-container .back-button:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Loading container styling */
+.loading-container {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .edit-question-container {
+    padding: 1rem;
   }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
+
+  .button-group {
+    flex-direction: column;
   }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"], input[type="number"] {
+
+  .button-group button {
     width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+    margin-bottom: 1rem;
   }
-  
-  button {
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 4px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+
+  .button-group button:last-child {
+    margin-bottom: 0;
   }
-  
-  button.cancel-button {
-    background-color: #f44336;
-  }
-  
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  .error-container {
-    padding: 20px;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    margin-bottom: 20px;
-  }
-  
-  .error-message {
-    color: #721c24;
-    font-size: 16px;
-  }
-  
-  .loading-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  #question-group, #optionA-group, #optionB-group, #optionC-group, #optionD-group, #correctAnswers-group, #points-group, #category-group, #button-group {
-    margin-bottom: 20px;
-  }
-  
+}

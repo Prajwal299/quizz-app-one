@@ -1,84 +1,107 @@
 /* Overall container for login page */
 .login-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f4f6f8;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fa7110 0%, #fad310 100%);
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+}
+
+/* Header of the login page */
+.login-header h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for error message */
+.error-message {
+  color: #ff6b6b;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-color: rgba(255, 107, 107, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Form styling */
+
+/* Input fields styling */
+.login-form input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #2c2c2c;
+  background-color: #FFF8DC; /* Light cream color for inputs */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Styling for each input group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Styling for input fields */
+.input-field {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+.input-field:focus {
+  border-color: #fddf1e;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+  outline: none;
+}
+
+/* Styling for submit button container */
+.submit-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
   
-  /* Header of the login page */
-  .login-header h2 {
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
   
-  /* Styling for error message */
-  .error-message {
-    color: red;
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-  
-  /* Form styling */
-  .login-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  /* Styling for each input group */
-  .input-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Styling for input fields */
-  .input-field {
-    padding: 10px;
-    border: 1px solid #bdc3c7;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-  }
-  
-  .input-field:focus {
-    border-color: #3498db;
-    outline: none;
-  }
-  
-  /* Styling for submit button container */
-  .submit-btn-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Submit button styling */
-  .submit-btn {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .submit-btn:hover {
-    background-color: #2980b9;
-  }
-  
-  .submit-btn:focus {
-    outline: none;
-  }
-  
+}
+
+/* Submit button styling */
+.submit-btn {
+  background-color: #e35416;
+  border-color: #fa7110;;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #e35416;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  background-color: #e35416;
+}
+
+.submit-btn:focus {
+  outline: none;
+  background-color: #e35416;
+}

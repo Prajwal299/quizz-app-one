@@ -1,13 +1,7 @@
-/* Global styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f7f6;
+  background-color: #c89376;
   color: #333;
 }
 
@@ -19,7 +13,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 40px 20px;
-  background: linear-gradient(to top right, #3e8e41, #76c7c0);
+  background: linear-gradient(135deg, #FFD700, #FF8C00);
 }
 
 /* Dashboard Title */
@@ -56,7 +50,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #f75c5c, #FF8C00);
   border: 2px solid #ddd;
   border-radius: 12px;
   padding: 25px;

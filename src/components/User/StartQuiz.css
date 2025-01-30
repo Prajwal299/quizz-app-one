@@ -5,22 +5,21 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f7f7f7;
-  font-family: 'Arial', sans-serif;
-  color: #333;
-}
 
 /* Quiz container */
 .quiz-container {
-  padding: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(15px);
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+ min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #FFD700, #FF8C00);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;  
+
 }
 
 /* Title styles */
@@ -36,6 +35,7 @@ body {
 .questions-container {
   display: flex;
   flex-direction: column;
+  width: 900px;
   gap: 25px;
 }
 

@@ -8,13 +8,17 @@ body {
 
 /* Container for the entire results page */
 .admin-results-container {
-  max-width: 1400px; /* Increased width */
-  margin: 40px auto;
-  padding: 40px; /* Increased padding for more space */
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #b285f5, #f33f3f);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Header Style */
@@ -44,7 +48,7 @@ h2 {
 }
 
 .filter-input:focus {
-  border-color: #6c63ff;
+  border-color: #f563ff;
   outline: none;
 }
 
@@ -69,7 +73,7 @@ th, td {
 }
 
 th {
-  background-color: #6c63ff;
+  background-color: #a20d64;
   color: white;
   font-weight: 600;
 }

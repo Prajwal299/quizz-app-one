@@ -1,6 +1,16 @@
 /* Result.css */
 .results-container {
-    padding: 20px;
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #FFD700, #FF8C00);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
   }
   
   .results-grid {
@@ -10,10 +20,11 @@
   }
   
   .result-card {
-    border: 2px solid #ddd;
+    border: 2px solid #000000;
     padding: 20px;
-    background: #f9f9f9;
+    background: #ffda07;
     border-radius: 8px;
+    width: 400px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   

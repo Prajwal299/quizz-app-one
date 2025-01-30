@@ -1,33 +1,4 @@
 
-// import React from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import './AdminDashboard.css';
-
-// const AdminDashboard = () => {
-//   const navigate = useNavigate();
-
-//   return (
-//     <div className="admin-dashboard">
-//       <div className="dashboard-header">
-//         <h2>Admin Dashboard</h2>
-//         <p>Manage questions, quizzes, and more!</p>
-//       </div>
-
-//       <div 
-//         className="create-question-container"
-//         onClick={() => navigate('/admin/create_question')}
-//       >
-//         <div className="create-question-card">
-//           <h3>Create Question</h3>
-//           <p>Click here to create new questions for the quiz</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AdminDashboard;
-
 
 
 import React from 'react';
@@ -46,7 +17,6 @@ const AdminDashboard = () => {
 
       {/* Create Question Container */}
       <div 
-        className="create-question-container"
         onClick={() => navigate('/admin/create_question')}
       >
         <div className="create-question-card">
